@@ -38,3 +38,38 @@ As a User
 So that I can manage my bookmarks
 I want to be able to update my bookmarks
 ```
+
+### To set up the database
+
+Connect to `psql` and create the `bookmark_manager` database:
+
+```
+CREATE DATABASE bookmark_manager;
+```
+
+To set up the appropriate tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
+
+Connect to the database using the pqsl command \c bookmark_manager;
+
+Run the query we have saved in the file 01_create_bookmarks_table.sql
+
+### To run the Bookmark Manager app:
+
+```
+run rackup
+```
+```
+To view bookmarks, navigate to `localhost:9292/bookmarks`.
+```
+
+### To run tests:
+
+```
+rspec
+```
+
+### To run linting:
+
+```
+rubocop
+```
