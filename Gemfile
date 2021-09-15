@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 # gem "rails"
 
+gem 'pg'
 gem 'capybara'
 gem 'rspec'
 gem 'sinatra'
