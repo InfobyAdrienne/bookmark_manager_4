@@ -53,6 +53,14 @@ Connect to the database using the pqsl command \c bookmark_manager;
 
 Run the query we have saved in the file 01_create_bookmarks_table.sql
 
+### Set up the test database 
+
+Make sure to set up the test database using the SQL query saved in db/migrations/01_create_bookmarks_table.sql to create a bookmarks table.
+
+$> psql
+admin=# CREATE DATABASE "bookmark_manager_test";
+admin=# CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
+
 ### To run the Bookmark Manager app:
 
 ```
