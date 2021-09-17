@@ -42,4 +42,13 @@ describe Bookmark do
       # expect(bookmark['title']).to eq 'LinkedIn'
     end
   end
+
+  describe '#delete' do 
+    it 'deletes a bookmark' do 
+      bookmark = Bookmark.create(url: 'http://www.linkedin.com', title: 'LinkedIn')
+      Bookmark.delete(id: bookmark.id)
+      expect(Bookmark.all).to be_empty
+    end 
+  end 
 end  
+
